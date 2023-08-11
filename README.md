@@ -5,11 +5,14 @@ This includes what is Low Power VLSI Design is and what are the Challenges that 
 
 ## Low Power Design
 
-```bash
+
   Low power design is a collection of techniques and methodologies aimed at reducing the overall dynamic and static power consumption of an integrated circuit (IC).
-```
+
 
 # Components of Power
+![image](https://github.com/Shivakumar-17/Low-Power-VLSI-Design/assets/136796176/3ba8a49e-6d3c-439e-bca0-d5de86dafaa6)
+
+
 #### Activity: 
 The level of activity or the number of active components in a circuit affects power 
 consumption. Active components, such as logic gates or transistors, consume more power when 
@@ -74,6 +77,8 @@ There are many low power design techniques available, some of which are very sim
 while others are more involved and complex
  
 #### Clock Gating
+![image](https://github.com/Shivakumar-17/Low-Power-VLSI-Design/assets/136796176/3d5996b9-b114-40e5-99d2-ff6dc6dd070d)
+
 This technique is typically performed during logic synthesis where enable flops are optimized 
 into a clock gating structure, thereby saving mux area and reducing the overall switching 
 activity of the clock net (refer to Figure ). With respect to the power equation, the goal is to 
@@ -83,6 +88,8 @@ optimization. Fortunately, this technique is well-known and well supported in mo
 flows.
 
 #### Multi Voltage Design
+![multivoltage](https://github.com/Shivakumar-17/Low-Power-VLSI-Design/assets/136796176/fbd851b5-9d24-45b0-944e-8d7f4585e6f3)
+
 This is a technique where functions of a chip are partitioned via performance characteristics –
 perhaps one block is high performance, while the rest of the chip is lower performance as 
 shown in Figure . To achieve the goals for the high-performance block, a higher voltage is 
@@ -94,6 +101,8 @@ designing in separate voltage islands where voltage crossings between islands ma
 “Level Shifter” (LS) cells with the need to implement and analyze the blocks at their different 
 voltage characteristics.
 #### Power Gating
+![Power gating](https://github.com/Shivakumar-17/Low-Power-VLSI-Design/assets/136796176/93a3c6e3-95ca-4d0e-8803-2413f2a5f59d)
+
 This is a technique where functions on an IC are also partitioned, much like multi voltage, but 
 this time the power supplies for the power domains are connected to power switches as shown 
 in Figure 4.4 . Power gating effectively shuts off the power completely for a block. In the power 
@@ -109,6 +118,8 @@ isolation enable signals must be implemented. It is essential that the order of 
 correct during power down and power up, such that the values during shutdown are clamped 
 to the right values at the right time.
 #### Retention with Power Gating
+![Retention with power gating](https://github.com/Shivakumar-17/Low-Power-VLSI-Design/assets/136796176/47661146-80fc-477f-ae67-d0b0ca26ba36)
+
 Retention (or register retention) is a technique used along with power gating. Here in each 
 shutdown block, when the block is OFF, either a subset of the flops or all the flops in the block 
 have their previous values saved. When the block powers on, then the previously saved values 
@@ -197,6 +208,16 @@ width (s):20n, period (s): 50n
 Initial value (V/A):0, pulsed value (V/A):1, delay (s):1n, risetime (s):1n, fall time (s):1n, pulse 
 width (s):30n, period (s):60n
 
+![image](https://github.com/Shivakumar-17/Low-Power-VLSI-Design/assets/136796176/b7bf9c6d-3bb2-4902-9216-1b9a60095516)
+#### Table 1 shows the simulated result of CMOS logic circuits on scale: 130nm.
+![image](https://github.com/Shivakumar-17/Low-Power-VLSI-Design/assets/136796176/95f37ed8-bae4-4fb5-ad6c-3075ca3a6340)
+
+####  Graph for above tabular data of Power Dissipation on scale 130nm
+![image](https://github.com/Shivakumar-17/Low-Power-VLSI-Design/assets/136796176/829bebaf-2612-42c4-aa90-0f8192b28b93)
+#### Graph for above tabular data of Delay on scale 130nm
+
+
+
 ## CONCLUSION AND FUTURE SCOPE
 ### CONCLUSION
 Low power design techniques play a crucial role in reducing power consumption and 
@@ -212,7 +233,8 @@ well biasing, zero-pin retention flops, dynamic voltage and frequency scaling (D
 custom design. Dynamic power verification and analysis are essential to ensure the correct 
 functioning of power management unit (PMU) control signals and accurate power estimation 
 results.
-Overall, the use of these low power design techniques enables the development of energyefficient VLSI circuits, reducing power consumption and extending battery life in portable 
+
+Overall, the use of these low power design techniques enables the development of energy efficient VLSI circuits, reducing power consumption and extending battery life in portable 
 devices. These techniques are widely supported in design tools and flows, making them 
 accessible for implementation in various projects. Continuous research and development in low 
 power design techniques are essential to further improve power efficiency and meet the 
@@ -221,35 +243,43 @@ increasing demand for energy-efficient electronic devices.
 The design and implementation of low-power VLSI circuits is an active area of research, and 
 there are several future trends that are being explored to further improve the power efficiency 
 of VLSI circuits. Here are some of the key trends:
-Energy Harvesting: Energy harvesting techniques involve capturing and utilizing ambient 
+#### Energy Harvesting: 
+Energy harvesting techniques involve capturing and utilizing ambient 
 energy sources, such as solar, thermal, or vibration energy, to power VLSI circuits. Researchers 
 are exploring ways to integrate energy harvesting modules directly into VLSI circuits, enabling 
 them to operate with minimal or no external power supply.
-Approximate Computing: Approximate computing is a technique that allows for trading off 
+#### Approximate Computing: 
+Approximate computing is a technique that allows for trading off 
 accuracy for power savings. By relaxing the requirement for precise computation, approximate 
 computing techniques can significantly reduce power consumption in VLSI circuits. This 
 approach is particularly useful for applications where a small loss in accuracy is acceptable, 
 such as image and signal processing.
-Emerging Technologies: Emerging technologies, such as spintronics, memristors, and tunnel 
+#### Emerging Technologies: 
+Emerging technologies, such as spintronics, memristors, and tunnel 
 field-effect transistors (TFETs), are being investigated for their potential to reduce power 
 consumption in VLSI circuits. These technologies offer new device structures and operating 
 principles that can enable lower power operation compared to traditional CMOS technology.
-Power Management Techniques: Power management techniques, such as dynamic voltage 
+#### Power Management Techniques: 
+Power management techniques, such as dynamic voltage 
 scaling (DVS) and adaptive power gating, are being further refined to optimize power 
 consumption in VLSI circuits. These techniques involve dynamically adjusting the supply 
 voltage and selectively powering down unused circuit blocks to minimize power consumption 
 during different operating conditions.
-Machine Learning and AI-based Optimization: Machine learning and AI techniques are being 
+#### Machine Learning and AI-based Optimization: 
+Machine learning and AI techniques are being 
 applied to optimize the design and implementation of low-power VLSI circuits. These 
 techniques can analyze large design spaces, identify power optimization opportunities, and 
 generate optimized circuit architectures and configurations.
-System-level Power Optimization: Power optimization is not limited to individual circuits but 
-also extends to system-level design considerations. Future trends involve exploring poweraware system architectures, interconnect optimization, and workload scheduling techniques to 
+#### System-level Power Optimization: 
+Power optimization is not limited to individual circuits but 
+also extends to system-level design considerations. Future trends involve exploring power aware system architectures, interconnect optimization, and workload scheduling techniques to 
 minimize power consumption across the entire system.
-Advanced Power Management Units: Power management units (PMUs) play a crucial role in 
+#### Advanced Power Management Units: 
+Power management units (PMUs) play a crucial role in 
 controlling and optimizing power consumption in VLSI circuits. Future trends involve the 
 development of advanced PMUs with enhanced power monitoring, adaptive power 
 management, and intelligent power allocation capabilities.
+
 It's important to note that these trends are based on current research and development efforts, 
 and the field of low-power VLSI circuits is continuously evolving. As new technologies and 
 techniques emerge, the focus on power efficiency will likely remain a key consideration in the 
